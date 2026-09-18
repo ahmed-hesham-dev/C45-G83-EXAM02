@@ -1,6 +1,5 @@
 ﻿using Examination_system.models;
 using Examination_system.models.Exam;
-using Examination_system.models.Exam;
 using System;
 using System.Diagnostics;
 using System.Timers;
@@ -69,5 +68,10 @@ public class FinalExam : Exam
         Console.WriteLine($"Time Taken      : {elapsed.Minutes} minutes {elapsed.Seconds} seconds");
         Console.WriteLine($"Your Grade      : {studentMark} / {totalMark}");
         Console.WriteLine("================================");
+    }
+
+    public override string ToString()
+    {
+        return $"Final Exam - Time: {Time} minutes, Number of Questions: {NumberOfQuestions}";
     }
 }

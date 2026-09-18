@@ -1,6 +1,5 @@
 ﻿using Examination_system.models;
 using Examination_system.models.Exam;
-using Examination_system.models.Exam;
 using System;
 using System.Diagnostics;
 using System.Timers;
@@ -83,5 +82,10 @@ public class PracticalExam : Exam
                 $"Question {i + 1}: {Questions[i].RightAnswer.AnswerName}"
             );
         }
+    }
+
+    public override string ToString()
+    {
+        return $"Practical Exam - Time: {Time} minutes, Number of Questions: {NumberOfQuestions}";
     }
 }
